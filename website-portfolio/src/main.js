@@ -19,6 +19,9 @@ dracoLoader.setDecoderPath("/draco/")
 const loader = new GLTFLoader();
 loader.setDRACOLoader(dracoLoader);
 
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, sizes.width / sizes.height, 0.1, 1000 );
+
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
 const raycasterObjects = [];
@@ -40,7 +43,6 @@ loader.load("/models/test_cat_v2.glb", (glb) => {
         child.userData.initialScale = new THREE.Vector3().copy(child.scale);
         child.userData.initialRotation = new THREE.Euler().copy(child.rotation);
         child.userData.initialPosition = new THREE.Vector3().copy(child.position);
-        child.userData.isAnimating = false; 
       };
       if (child.name.includes("Raycaster")) {
         raycasterObjects.push(child);
@@ -53,8 +55,10 @@ loader.load("/models/test_cat_v2.glb", (glb) => {
   scene.add(glb.scene);
 });
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, sizes.width / sizes.height, 0.1, 1000 );
+scene.add(new THREE.AmbientLight(0xffffff, 1));
+const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+dirLight.position.set(5, 10, 5);
+scene.add(dirLight);
 
 camera.position.z = 5;
 
@@ -79,6 +83,8 @@ window.addEventListener("resize", () => {
 
 function playHoverAnimation(obj, isHovering) {
   gsap.killTweensOf(obj.scale);
+  gsap.killTweensOf(obj.rotation);
+  gsap.killTweensOf(obj.position);
 
   if (isHovering) {
     gsap.to(obj.scale,{
@@ -88,9 +94,6 @@ function playHoverAnimation(obj, isHovering) {
       duration: 0.5,
       overwrite: "auto",
       ease: "bounce.out(1.8)",
-      onComplete: () => {
-        obj.userData.isAnimating = false;
-      },
     });
   }
   else {
@@ -100,9 +103,6 @@ function playHoverAnimation(obj, isHovering) {
       z: obj.userData.initialScale.x,
       duration: 0.3,
       ease: "bounce.out(1.8)",
-      onComplete: () => {
-        obj.userData.isAnimating = false;
-      },
     });
   };
 }
@@ -140,6 +140,9 @@ const render = () => {
       playHoverAnimation(curHoveredObj, false);
       curHoveredObj = null;
     }
+    for (let i = 0; i < raycasterObjects.length; i++ ) {
+      raycasterObjects[i].material.color.set(0x00ff00);
+    };
     document.body.style.cursor = "default";
   }
 
