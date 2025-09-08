@@ -11,6 +11,25 @@ const sizes = {
   height: window.innerHeight,
 };
 
+//modal setup
+const modals = {
+  about: document.querySelector(".modal")
+};
+document.querySelectorAll(".modal-buttons").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const modal = e.target.closest(".modal");
+    hideModal(modal);
+  });
+});
+const showModal = (modal) => {
+  modal.style.display = "block";
+  gsap.set(modal, {opacity:0});
+  gsap.to(modal, {opacity:1, duration: 0.5});
+};
+const hideModal = (modal) => {
+  gsap.to(modal, {opacity:0, duration: 0.5, onComplete: () => {modal.style.display = "none"}});
+};
+
 //load in models
 const textureLoader = new THREE.TextureLoader();
 const dracoLoader = new DRACOLoader();
@@ -22,6 +41,7 @@ loader.setDRACOLoader(dracoLoader);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, sizes.width / sizes.height, 0.1, 1000 );
 
+//raycaster vars
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
 const raycasterObjects = [];
@@ -33,6 +53,17 @@ window.addEventListener("mousemove", (event) => {
   pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
   pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
+
+// check for click
+window.addEventListener("click", (e) => {
+  if (curIntersects.length > 0) {
+    const object = curIntersects[0].object;
+
+    if (object.name.includes("Hover")) {
+      showModal(modals.about);
+    };
+  }
+})
 
 // TODO: load in textures...
 
@@ -47,6 +78,8 @@ loader.load("/models/test_cat_v2.glb", (glb) => {
       if (child.name.includes("Raycaster")) {
         raycasterObjects.push(child);
       };
+
+      //load in temporary texture
       child.material = new THREE.MeshStandardMaterial({
         color: 0x00ff00
       });
@@ -55,6 +88,7 @@ loader.load("/models/test_cat_v2.glb", (glb) => {
   scene.add(glb.scene);
 });
 
+//load in lighting
 scene.add(new THREE.AmbientLight(0xffffff, 1));
 const dirLight = new THREE.DirectionalLight(0xffffff, 2);
 dirLight.position.set(5, 10, 5);
@@ -127,7 +161,6 @@ const render = () => {
         
       };
     
-      
     };
 
     curIntersects[i].object.material.color.set(0xff0000);
@@ -136,6 +169,7 @@ const render = () => {
     document.body.style.cursor = "pointer";
   }
   else {
+    //mouse no longer hovers over objects
     if (curHoveredObj) {
       playHoverAnimation(curHoveredObj, false);
       curHoveredObj = null;
