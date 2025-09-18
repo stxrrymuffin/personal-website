@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox, Safari 18.2+, Chromium 121+ */
 }
 
 :root {
@@ -21,7 +23,7 @@
   overflow: hidden;
 }
 
-#experience-canvas {
+#exp-canvas {
   height: 100%;
   width: 100%;
 }
@@ -36,4 +38,57 @@
   display: none;
   background-color: black;
   color: white;
+}
+
+/* top nav */
+.topnav {
+  background-color: #ccccff;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  margin-top: -4px;
+}
+
+/* topnav links */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #e1d4fa;
+  color: white;
+}
+
+/* active/current link */
+.topnav a.active {
+  background-color: #aaaaf9;
+  color: white;
+}
+
+.nothing {
+  color: #aaaaf9;
+}
+
+/* specifically for about.html */
+.about-me-div {
+  width: 60%;
+  margin: 20px auto;
+  margin-top: 50px;
+  overflow: hidden;
+  padding: 20px; 
+  background-color: #aaaaf9;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.me-image {
+  width: 30%;
+  height: auto;
+  margin: 20px;
 }
