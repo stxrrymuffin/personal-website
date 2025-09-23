@@ -1,4 +1,5 @@
 * {
+  font-family: 'Pixel';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,8 +7,22 @@
   scrollbar-width: none;     /* Firefox, Safari 18.2+, Chromium 121+ */
 }
 
+@font-face {
+  font-family: "Romantics";
+  src: url('src/ROMANTIC.TTF') format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pixel';
+  src: url('/src/LowresPixel-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Pixel';
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -102,33 +117,11 @@
   overflow: hidden;
   padding: 20px; 
   padding-top: 0px;
-  background-color: #aaaaf9;
-  border-radius: 8px;
-}
-
-.project-bar {
-  width: 107%;
   background-color: #e1d4fa;
-  margin-left: -40px;
-  margin-right: -40px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 10px;
-  padding-left: 20px;
-  padding-right: 10px;
-}
-
-.project-bar div {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-#projects-title {
-  margin-top: 30px;
-  text-align: center;
+  border-radius: 4px;
+  border-width: 10px;
+  border: solid;
+  border-color: #726dd3;
 }
 
 .project-left {
@@ -142,6 +135,38 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.project-bar {
+  width: 100%;
+  background-color: #a6a2ff;
+  margin-left: -42px;
+  margin-right: -42px;
+  margin-bottom: 20px;
+  margin-top:-2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+  border-radius: 4px;
+  border-width: 10px;
+  border: solid;
+  border-color: #726dd3;
+}
+
+.project-bar div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#projects-title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 60px;
+  color: white;
 }
 
 .project-img {
@@ -168,12 +193,18 @@
   margin-right: 50px;
 }
 
+body {
+  background: linear-gradient(to bottom, #dda9fb, #edb8e4, #f9c5d2, #fecacc);
+  background-size: 100% 200%;
+}
+
 
 /* for contact.html */
 
 #contact-title {
   text-align: center;
   margin-top: 30px;
+  font-weight: bold;
 }
 
 /* form inputs */
