@@ -306,6 +306,15 @@ input[type=submit]:hover {
   }
 }
 
+@keyframes slide-bg2 {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
 .stars {
  background: transparent url("/src/stars.png") repeat;
  position: fixed;
@@ -316,5 +325,10 @@ input[type=submit]:hover {
 	display: block;
   z-index: -1000;
   background-repeat: repeat;
-  animation: slide-bg 120s linear infinite;
+  animation: slide-bg 200s linear infinite;
+}
+
+.stars2 {
+  transform: rotate(45deg);
+  animation: slide-bg2 240s linear infinite;
 }
