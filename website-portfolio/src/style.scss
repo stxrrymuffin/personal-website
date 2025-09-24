@@ -9,9 +9,10 @@
 
 @font-face {
   font-family: "Romantics";
-  src: url('src/ROMANTIC.TTF') format("ttf");
+  src: url('/src/ROMANTIC.TTF') format("truetype");
   font-weight: normal;
   font-style: normal;
+  letter-spacing: 40px;
 }
 
 @font-face {
@@ -22,7 +23,7 @@
 }
 
 :root {
-  font-family: 'Pixel';
+  font-family: 'Romantics';
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -115,33 +116,43 @@
   margin: 20px auto;
   margin-top: 50px;
   overflow: hidden;
-  padding: 20px; 
   padding-top: 0px;
+  padding-left: -2px;
+  padding-right: -2px;
   background-color: #e1d4fa;
   border-radius: 4px;
   border-width: 10px;
   border: solid;
   border-color: #726dd3;
+  box-sizing: border-box;
 }
 
 .project-left {
   margin-left: 10%;
-  padding-left: 40px;
+}
+
+.project-left .project-title, .project-left .project-blurb {
+  margin-left: 40px;
 }
 
 .project-right {
   margin-right: 10%;
-  padding-right: 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: stretch;
+}
+
+.project-right .project-title, .project-right .project-blurb {
+  margin-right: 40px;
+  text-align: right;
 }
 
 .project-bar {
-  width: 100%;
+  width: calc(fit-content + 4px);
+  box-sizing: border-box;
   background-color: #a6a2ff;
-  margin-left: -42px;
-  margin-right: -42px;
+  margin-left: -2px;
+  margin-right: -2px;
   margin-bottom: 20px;
   margin-top:-2px;
   display: flex;
@@ -167,6 +178,8 @@
   text-align: center;
   font-size: 60px;
   color: white;
+  font-family: 'Romantics';
+  letter-spacing: 4px;
 }
 
 .project-img {
@@ -205,6 +218,8 @@ body {
   text-align: center;
   margin-top: 30px;
   font-weight: bold;
+  font-family: 'Romantics';
+  letter-spacing: 4px;
 }
 
 /* form inputs */
