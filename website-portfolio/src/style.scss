@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Romantics";
-  src: url('/src/ROMANTIC.TTF') format("truetype");
+  src: url('/src/suika.otf') format("truetype");
   font-weight: normal;
   font-style: normal;
   letter-spacing: 40px;
@@ -179,7 +179,7 @@
   font-size: 60px;
   color: white;
   font-family: 'Romantics';
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .project-img {
@@ -207,7 +207,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #dda9fb, #edb8e4, #f9c5d2, #fecacc);
+  background: linear-gradient(to bottom, #ca86f2, #edb8e4, #f9c5d2, #fecacc);
   background-size: 100% 200%;
 }
 
@@ -218,8 +218,10 @@ body {
   text-align: center;
   margin-top: 30px;
   font-weight: bold;
+  font-size: 60px;
+  color: white;
   font-family: 'Romantics';
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 /* form inputs */
@@ -256,4 +258,63 @@ input[type=submit]:hover {
   margin-top: 30px;
   padding: 20px;
   width: 80%;
+}
+
+/* stars */
+
+@keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+@-webkit-keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+@-moz-keyframes move-background {    
+	from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+    @-webkit-keyframes move-background {
+	from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+@keyframes slide-bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.stars {
+ background: transparent url("/src/stars.png") repeat;
+ position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  z-index: -1000;
+  background-repeat: repeat;
+  animation: slide-bg 120s linear infinite;
 }
