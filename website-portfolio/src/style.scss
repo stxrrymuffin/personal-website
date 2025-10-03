@@ -22,6 +22,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Playfair-Italic';
+  src: url('/src/PlayfairDisplay-Italic.ttf') format("truetype");
+}
+
 :root {
   font-family: 'Romantics';
   font-synthesis: none;
@@ -58,7 +63,7 @@
 
 /* top nav */
 .topnav {
-  background-color: #ccccff;
+  background-color: #5064a7;
   overflow: hidden;
   position: fixed;
   width: 100%;
@@ -77,36 +82,106 @@
 }
 
 .topnav a:hover {
-  background-color: #e1d4fa;
+  background-color: #36477a;
   color: white;
 }
 
 /* active/current link */
 .topnav a.active {
-  background-color: #aaaaf9;
+  background-color: #859ada;
   color: white;
 }
 
 .nothing {
-  color: #aaaaf9;
+  color: #5064a7;
 }
 
 /* specifically for about.html */
 .about-me-div {
-  width: 60%;
-  margin: 20px auto;
-  margin-top: 50px;
-  overflow: hidden;
-  padding: 20px; 
-  background-color: #aaaaf9;
-  border-radius: 8px;
+  height: fit-content;
+  width: 40%;
+  position: relative;
+  margin-top: 30px;
+  left: 10%;
+}
+.about-me-div .bg {
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+.about-me-div div {
+  left: 0%;
+  width: 100%;
+  margin-top: 12%;
   text-align: center;
+  position: absolute;
+}
+.about-me-div div h1 {
+  font-family: "Playfair-Italic";
+  color:#1700d1;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  font-size: 3vw;
+}
+.about-me-div div img {
+  width: 30%;
+  margin-top: 10px;
 }
 
-.me-image {
-  width: 30%;
-  height: auto;
-  margin: 20px;
+.tiny-img-display-div {
+  height: fit-content;
+  width: 15%;
+  position: relative;
+  margin-top: 3%;
+  float: right;
+  right: 15%;
+}
+.tiny-img-display-div .bg {
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+.cloud {
+  width: 15%;
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
+}
+
+#cloud1 {
+  position: relative;
+  left: 45%;
+  margin-top: 7%;
+}
+
+.giant-about-me-div {
+  height: fit-content;
+  width: 50%;
+  position: relative;
+  margin-top: 20%;
+  float: right;
+  right: -6%;
+}
+.giant-about-me-div .bg {
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+.ending {
+  position: relative;
+  margin-top: 100%;
 }
 
 /* specifically for projects.html */
@@ -207,11 +282,12 @@
 }
 
 body {
-  background: linear-gradient(135deg, #8992dd, #d2bbd8, #edb8e4, #f9c5d2, #fecacc);
-  background-size: 100% 200%;
+  
+  background: linear-gradient(120deg, #8992dd, #d2bbd8, #fecacc, #fecacc);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   cursor: url('src/mouse_cursor.png'), auto;
 }
-
 
 /* for contact.html */
 
@@ -336,13 +412,13 @@ input[type=submit]:hover {
 
 .grid {
   background: transparent url("/src/grid.png") repeat;
-  opacity: 50%;
+  opacity: 100%;
   position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	display: block;
-  z-index: -1;
+  z-index: -100;
   background-repeat: repeat;
 }
