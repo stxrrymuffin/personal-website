@@ -1,5 +1,5 @@
 * {
-  font-family: 'Pixel';
+  font-family: 'Press-Start';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,6 +25,11 @@
 @font-face {
   font-family: 'Playfair-Italic';
   src: url('/src/PlayfairDisplay-Italic.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Press-Start';
+  src: url('/src/PressStart2P-Regular.ttf') format("truetype");
 }
 
 :root {
@@ -54,7 +59,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 32px;
+  font-size: 3vw;
   z-index: 999;
   display: none;
   background-color: black;
@@ -103,6 +108,11 @@
   position: relative;
   margin-top: 30px;
   left: 10%;
+  transition: transform 0.6s ease-in-out;
+  transform: scale(1);
+}
+.about-me-div:hover {
+  transform: scale(1.02);
 }
 .about-me-div .bg {
   width: 100%;
@@ -135,11 +145,42 @@
   margin-top: 3%;
   float: right;
   right: 15%;
-}
-.tiny-img-display-div .bg {
+  transition: transform 0.6s ease-in-out;
+  transform: scale(1);
+  animation-name: rotate-div;
+  animation-duration: 2s; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  .slideshow {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    object-fit: cover;
+    padding: 10px;
+  }
+  .bg {
   width: 100%;
+  height: auto;
   position: absolute;
   z-index: -10;
+  display: block;
+    margin: auto;
+  }
+}
+
+.tiny-img-display-div:hover {
+  transform: scale(1.1);
+}
+
+@keyframes rotate-div {
+  from {
+    transform: roate(-10deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
 }
 
 .cloud {
@@ -172,11 +213,65 @@
   margin-top: 20%;
   float: right;
   right: -6%;
+  transition: transform 0.6s ease-in-out;
+  transform: scale(1);
+}
+.giant-about-me-div:hover {
+  transform: scale(1.02);
 }
 .giant-about-me-div .bg {
   width: 100%;
   position: absolute;
   z-index: -10;
+}
+.giant-about-me-div div {
+  margin-left: 15%;
+  margin-top: 12%;
+  position: relative;
+  display: flex;
+  align-content: center;
+}
+.some-info {
+  margin-left: 15%;
+  display: block;
+  text-align: center;
+  padding: 10%;
+  padding-top: 3%;
+  color:#1700d1;
+  font-size: 1.5vw;
+  line-height: 1.5;
+}
+.giant-about-me-div div span {
+  width: 50%;
+  text-align: center;
+  margin-top: 5%;
+  height: fit-content;
+  h1 {
+    font-family: "Playfair-Italic";
+    color:#1700d1;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-size: 3vw;
+  }
+  h2 {
+    font-family: "Playfair-Italic";
+    color:#1700d1;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-size: 1.5vw;
+    margin-bottom: 10%;
+  }
+  h4 {
+    color:#1700d1;
+    font-size: 1.25vw;
+    line-height: 1.5;
+  }
+}
+.me-img {
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 5%;
+  border: 1vw solid #5064a7;
 }
 
 .ending {
