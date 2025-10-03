@@ -331,25 +331,33 @@
   z-index: 10;
 }
 
-.discord {
-  width: 10%;
+.hyperlinks {
   position: absolute;
   float: right;
-  right: 40%;
+  right: 16%;
   margin-top: 12%;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5vw;
+  text-align: center;
+}
+
+.discord, .spotify, .github {
+  width: 100%;
   z-index: 10;
   transform: scale(1);
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
 
-.discord:hover {
+.discord:hover, .spotify:hover, .github:hover {
   transform: scale(1.1) rotate(-10deg);
 }
 
 .text-window-div {
   height: fit-content;
-  width: 60%;
+  width: 65%;
   position: relative;
   margin-top: 85%;
   margin-left: auto;
@@ -368,7 +376,7 @@
   }
   div {
     text-align: left;
-    width: 70%;
+    width: 65%;
     padding: 5%;
     padding-left: 7%;
     padding-top: 15%;
