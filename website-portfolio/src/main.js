@@ -5,16 +5,6 @@ import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {gsap} from "gsap";
 
-//for about.html
-
-const cute_cat = document.getElementById("cute-cat");
-const hoverSfx = document.getElementById("hover-sfx");
-
-cute_cat.addEventListener("mouseenter", () => {
-  hoverSfx.currentTime = 0; 
-  hoverSfx.play();
-});
-
 
 //for index.html
 
