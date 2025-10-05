@@ -74,9 +74,37 @@
   width: 100%;
   z-index: 1000;
   margin-top: -4px;
+  height: fit-content;
 }
 
-/* topnav links */
+.topnav h4{
+   font-size: 2vh;
+   padding: 14px 16px;
+   float:left;
+   color: #f2f2f2;
+   
+}
+.topnav img {
+  position: relative;
+  width: 2%;
+  left: 0%;
+  margin-top: 0.4%;
+}
+
+.song-name {
+  position: fixed;
+  display: inline-block;
+  padding: 14px 16px;
+  font-size: 2vh;
+  color: #f2f2f2;
+}
+
+@media (max-width: 1000px) {
+  .topnav h4, .topnav img, .song-name {
+    display: none;
+  }
+}
+
 .topnav a {
   float: right;
   color: #f2f2f2;
@@ -91,7 +119,6 @@
   color: white;
 }
 
-/* active/current link */
 .topnav a.active {
   background-color: #859ada;
   color: white;
@@ -640,12 +667,16 @@
   border-radius: 8px;
   transform: scale(1);
   transition: transform 0.6s ease-in-out;
-  h1 {
-    font-size: 1vw;
-    font-family: "Playfair-Italic";
-    color:white;
-    font-weight: bolder;
-    text-align: center;
+  color:white;
+  font-family: "Playfair-Italic";
+  font-weight: bolder;
+  text-align: center;
+  font-size: 1vw;
+  a {
+      font-family: inherit;
+      color: inherit;
+      font-size: inherit;
+      text-decoration: none;
   }
 }
 .ending:hover {
