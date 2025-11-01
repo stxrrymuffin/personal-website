@@ -28,11 +28,17 @@ in favor of fleshing out the baseline CSS & HTML that I wanted.
 
 I had four types of pages in mind initially: a "personal" 3d room, an about-me page, a
 projects page, & a contact page. I focused a lot on the 3d aspect at first but when I started
-working on the other pages, I realized I was really not content with how the pages looked.
+working on the other pages, I realized I was really not content with how the pages looked. You can
+check out some of my old commits to see screenshots of the time I spent on 3d modeling! (can I get just
+one artifact for all the hours I spent in blender,, I'm so close to 40 artifacts,,,)
 
 As a result, I took a lot of time in Canva to design something that I was happy with, and
 from there on, it was mostly smooth sailing -- I just had to translate what I saw in Canva
-to CSS/HTML.
+to CSS/HTML! This was still pretty difficult because I wanted my page to be responsive to changes
+in page width, but I think I got it working in the end!
+
+I focused first on getting the major components of each page in (ie. the giant text boxes), and then
+I moved onto adding the tiny accents into each page (the stars, balloons, etc).
 
 <p align="center" width="100%">
 <img src="src/canva_screenshot.png" width=40%>
