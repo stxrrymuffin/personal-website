@@ -6,7 +6,7 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {gsap} from "gsap";
 
 
-//for index.html
+//for room.html
 
 const canvas = document.querySelector("#exp-canvas");
 const sizes = {

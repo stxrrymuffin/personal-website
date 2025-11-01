@@ -184,7 +184,7 @@
     width: 80%;
     display: block;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 15%;
     object-fit: cover;
     padding: 10px;
   }
@@ -521,7 +521,9 @@
     margin: auto;
   }
   .slideshow {
+    overflow: hidden;
     width: 70%;
+    aspect-ratio: 1 / 1;
     display: block;
     margin: auto;
     object-fit: cover;
@@ -1040,7 +1042,7 @@ body {
   .slideshow {
     height: 70%;
     width: 100%;
-    margin-top: 5%;
+    margin-top: -20%;
   }
 }
 
