@@ -7,6 +7,11 @@ This project is a way to showcase some cool facts about me, some projects I've w
 in the past, people/games that inspire me, and some organizations I highly support (if you make a donation, let me know and I'll
 match you!:D) For example, I love cats, Venti from Genshin Impact, and retro / low poly aesthetics :>
 
+Link to website: stxrrymuffin.github.io/personal-website
+*Note: you will probably have to switch between pages to enable the autoplay audio,
+which is typically disabled on browsers.
+
+
 ## Why I made this project
 I made this project because I want to be able to share a little bit about myself
 through my art & creations, especially as I am getting to meet more people & different communities:)
