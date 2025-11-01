@@ -1,18 +1,18 @@
-# stxrrymuffin's ✨*personal website*✨!:D
+# stxrrymuffin's ✨*personal website*✨!
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
-
+<p align="center" width="100%">
+<img src="src/bunny_placeholder.jpg" width=20%>
+</p>
 This project is a way to showcase some cool facts about me, some projects I've worked on 
-in the past, and some organizations I highly support (if you make a donation, let me know and I'll
-match you!:D)
-
-art credits:
+in the past, people/games that inspire me, and some organizations I highly support (if you make a donation, let me know and I'll
+match you!:D) For example, I love cats, Venti from Genshin Impact, and retro / low poly aesthetics :>
 
 ## Why I made this project
 I made this project because I want to be able to share a little bit about myself
-through my art & creations, especially as I am getting to meet more communities:)
+through my art & creations, especially as I am getting to meet more people & different communities:)
 
 I also wanted to make something personal for myself and I thought this website would be a good
-creative outlet! I wanted to experiment with a lot of new things, especially 3d & a BUNCH
+creative outlet! I wanted to experiment with a lot of new things via this project, especially 3d & a BUNCH
 of styling.
 
 ## How I made this project
@@ -32,7 +32,8 @@ to CSS/HTML.
 <img src="src/canva_screenshot.png" width=40%>
 <img src="src/website_screenshot.png" width=40%>
 </p>
-^Canva -> website translation :D
+<p align="center" width="100%">Canva -> website translation :D</p>
+<p align="center" width="100%">(the cat meows, by the way! hover over it:P)</p>
 
 ## Struggles & what I learned
 Like I said earlier, I struggled a lot with designing the website. I had a lot of
@@ -45,5 +46,5 @@ the website, too!
 Something else I struggled with was deploying the website. It was my first time working
 with Vite & three.js, and everything just fell apart when I deployed it to Vercel because
 I had multiple html files. I ended up just cutting down my files significantly to the bare
-minimum and deployed my project through GitHub instead:) though in the future I'll definitely
+minimum and deployed my project through GitHub instead -- though in the future, I'll definitely
 be finding an alternative method when I re-incorporate 3d into my website.
