@@ -1,5 +1,5 @@
-//for index.html
-import './style.scss'
+//for about.html
+//import 'style.scss'
 const cute_cat = document.getElementById("cute-cat");
 const hoverSfx = document.getElementById("hover-sfx");
 
@@ -16,7 +16,7 @@ const sizes = {
 
 // for inspo slideshow
 var inspo_img = document.getElementById("inspo_slideshow");
-var images = ["/personal-website/personal-website/src/laufey_bewitched.png","/personal-website/personal-website/src/genshin_logo.webp","/personal-website/personal-website/src/deltarune.webp","/personal-website/personal-website/src/omori_img.jpg","/personal-website/personal-website/src/peachriot.jpg","/personal-website/personal-website/src/wangyuja.jpg"];
+var images = ["src/laufey_bewitched.png","src/genshin_logo.webp","src/deltarune.webp","src/omori_img.jpg","src/peachriot.jpg","src/wangyuja.jpg"];
 var index=0;
 
 function changeImage()
