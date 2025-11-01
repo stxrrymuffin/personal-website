@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Romantics";
-  src: url('src/suika.otf') format("truetype");
+  src: url('/src/suika.otf') format("truetype");
   font-weight: normal;
   font-style: normal;
   letter-spacing: 40px;
@@ -17,19 +17,19 @@
 
 @font-face {
   font-family: 'Pixel';
-  src: url('src/LowresPixel-Regular.otf') format('opentype');
+  src: url('/src/LowresPixel-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Playfair-Italic';
-  src: url('src/PlayfairDisplay-Italic.ttf') format("truetype");
+  src: url('/src/PlayfairDisplay-Italic.ttf') format("truetype");
 }
 
 @font-face {
   font-family: 'Press-Start';
-  src: url('src/PressStart2P-Regular.ttf') format("truetype");
+  src: url('/src/PressStart2P-Regular.ttf') format("truetype");
 }
 
 :root {
@@ -1205,7 +1205,7 @@ input[type=submit]:hover {
 }
 
 .stars {
- background: transparent url("src/stars.png") repeat;
+ background: transparent url("/src/stars.png") repeat;
  position: fixed;
 	top: 0;
 	bottom: 0;
@@ -1223,7 +1223,7 @@ input[type=submit]:hover {
 }
 
 .grid {
-  background: transparent url("src/grid.png") repeat;
+  background: transparent url("/src/grid.png") repeat;
   opacity: 100%;
   position: fixed;
 	top: 0;
