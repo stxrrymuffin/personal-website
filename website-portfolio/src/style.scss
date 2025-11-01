@@ -128,7 +128,7 @@
   color: #5064a7;
 }
 
-/* specifically for about.html */
+/* specifically for index.html */
 .about-me-div {
   height: fit-content;
   width: 40%;
@@ -1045,6 +1045,52 @@ body {
 }
 
 /* for donate.html */
+#donate-ending {
+  margin-top:10%;
+}
+
+#cloud5 {
+  position: absolute;
+  left: 70%;
+  width: 25%;
+  margin-top: 20%;
+  z-index: 10;
+  animation: floatUpDown 7s ease-in-out infinite;
+}
+
+#star3_3d {
+  position: absolute;
+  margin-top: 45%;
+  left: 22%;
+  width: 12%;
+  animation: rotate-div 3s infinite alternate ease-in-out;
+}
+
+#star1_2d {
+  position: absolute;
+  float: right;
+  margin-top: 6%;
+  right: 20%;
+  width: 20%;
+}
+
+#dog3 {
+  position: absolute;
+  float: right;
+  right: 42%;
+  margin-top: 96%;
+  width: 10%;
+  animation: rotate-div 3s infinite alternate ease-in-out;
+}
+
+#ribbon4 {
+  position: absolute;
+  left: 20%;
+  margin-top: 132%;
+  z-index: 100;
+  width: 15%;
+  animation: rotate-div 4s infinite alternate ease-in-out;
+}
 
 #donate-title {
   text-align: center;
