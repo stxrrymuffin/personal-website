@@ -500,10 +500,10 @@
  .scrolling-txt-div {
 	 width: 30%;
 	 background-color: #36477a;
-	 padding-top: 3vh;
-	 padding-bottom: 3vh;
+	 padding-top: 2vw;
+	 padding-bottom: 2vw;
 	 position: relative;
-	 margin-top: 5%;
+	 margin-top: 7%;
 	 margin-left: 28%;
 }
  .scrolling-txt-div div {
