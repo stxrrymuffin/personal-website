@@ -150,7 +150,10 @@
 }
  .about-me-div div img {
 	 width: 30%;
-	 margin-top: 5%;
+	 margin-top: 0px;
+}
+#donate-img {
+	margin-top: 5%;
 }
  .about-me-div:hover {
 	 transform: scale(1.02);

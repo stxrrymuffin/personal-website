@@ -38,7 +38,7 @@ to CSS/HTML! This was still pretty difficult because I wanted my page to be resp
 in page width, but I think I got it working in the end!
 
 I focused first on getting the major components of each page in (ie. the giant text boxes), and then
-I moved onto adding the tiny accents into each page (the stars, balloons, etc).
+I moved onto adding the tiny accents into each page (the stars, balloons, ribbons, etc).
 
 <p align="center" width="100%">
 <img src="src/canva_screenshot.png" width=40%>
@@ -51,7 +51,7 @@ I moved onto adding the tiny accents into each page (the stars, balloons, etc).
 Like I said earlier, I struggled a lot with designing the website. I had a lot of
 references from Pinterest, but somehow they all combined into a terrible result
 when I tried free-styling the design while programming simultaneously. I learned that
-even just setting aside 1-2 hours doing planning was essential to having a confident
+even just setting aside 1-2 hours doing planning (I spent 3+ :P) was essential to having a confident
 vision in what I was going to create. This helped me find more motivation in completing
 the website, too!
 
