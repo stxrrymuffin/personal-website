@@ -1,5 +1,5 @@
 //for index.html
-import 'style.scss'
+//import 'style.scss'
 const cute_cat = document.getElementById("cute-cat");
 const hoverSfx = document.getElementById("hover-sfx");
 
